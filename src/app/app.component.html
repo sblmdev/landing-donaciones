@@ -1,15 +1,107 @@
-<div class="w-full border-b-2">
-  <div class="px-20 py-4">
-    <img src="../assets/img/logo.png" />
+<div class="w-100 ">
+  <img class="w-full h-auto" src="../assets/img/Presentación1.png"/>
+
+  <div class="absolute top-10 right-1/2 transform translate-x-1/2 px-40 py-5 bg-gray-500/50 w-fit ">
+    <h1 class="text-white font-bold font-monserrat text-5xl text-center">SÚMATE</h1>
+    <p class="text-gray-200 font-monserrat text-2xl text-center">
+      Ayuda a mejorar la calidad de vida
+      
+    </p>
+
+    <p class="text-gray-200 font-monserrat text-2xl text-center">
+      De las personas vulnerables
+      
+    </p>
+    <p class="text-gray-200 font-monserrat text-2xl text-center">
+      Sé parte de
+    </p>
+    <div class="w-fit italic font-bold text-gray-200 font-monserrat text-3xl bg-violet-800 bg-contain mx-auto px-2">
+      VIVIR PARA SERVIR
+    </div>
+    
+  </div>
+  <button class="absolute bottom-44 right-1/2 transform translate-x-1/2 px-8 py-3  bg-blue-600 hover:bg-blue-700 text-white font-bold font-monserrat text-2xl text-center border border-blue-700 rounded" (click)="bajar()">
+    Dona a nombre de la S.B.L.M DONACIONES
+  </button>
+  
+</div>
+<!--TABS DE NAVEGACION-->
+<div class="mt-16 px-20 border-t flex sm:space-x-10 md:grid md:grid-cols-3 md:gap-x-8 md:space-x-0" role="tablist" aria-orientation="horizontal">
+  <div>
+    <!-- Linea1-->
+    <div class="relative -mt-px border-t pb-6  pt-4 text-left md:pb-10 md:pt-8 border-indigo-500" 
+    [ngClass]="{
+      'border-indigo-500': item === 1,
+      'border-transparent hover:border-slate-400': item !== 1
+    }">
+      <h3>
+        <!-- Boton1-->
+        <button class="whitespace-nowrap text-sm font-montserrat leading-7 sm:text-base [&amp;:not(:focus-visible)]:focus:outline-none text-indigo-600" id="tab1" role="tab" type="button" aria-selected="true" tabindex="0" data-headlessui-state="selected" aria-controls="headlessui-tabs-panel-16"  
+        [ngClass]="{
+          'text-indigo-600': item === 1,
+          'text-slate-900': item !== 1
+        }" (click)="activateTab(1)">
+        <span class="absolute inset-0 -top-px"></span>Billeteras Electrónicas</button>
+      </h3>
+      <p 
+        class="mt-2 hidden text-sm leading-6 text-slate-700 md:block">Realiza tu donación a través de la plataforma de tu preferencia: Yape, Plin, etc. 
+      </p>
+    </div>
+  </div>
+  <div class="w-10 min-w-[1rem] shrink sm:hidden" aria-hidden="true">
+
+  </div>
+  <div>
+    <!-- Linea2-->
+    <div class="relative -mt-px border-t pb-6 pt-4 text-left md:pb-10 md:pt-8 border-transparent hover:border-slate-400" 
+    [ngClass]="{
+      'border-indigo-500': item === 2,
+      'border-transparent hover:border-slate-400': item !== 2
+    }">
+      <h3>
+        <!-- Boton2-->
+        <button class="whitespace-nowrap text-sm font-montserrat leading-7 sm:text-base [&amp;:not(:focus-visible)]:focus:outline-none text-slate-900" id="tab2" role="tab" type="button" aria-selected="true" tabindex="-1" data-headlessui-state="" aria-controls="headlessui-tabs-panel-17"  
+        [ngClass]="{
+          'text-indigo-600': item === 2,
+          'text-slate-900': item !== 2
+        }" (click)="activateTab(2)">
+          <span class="absolute inset-0 -top-px"></span>Transferencias Bancarias</button>
+        </h3>
+        <p
+        class="mt-2 hidden text-sm leading-6 text-slate-700 md:block">Realiza tu donación a través del banco de tu preferencia: BCP, BBVA, Scotiabank, etc.
+        </p>
+    </div>
+  </div>
+  <div class="w-10 min-w-[1rem] shrink sm:hidden" aria-hidden="true">
+
+  </div>
+  <div>
+    <!-- Linea3-->
+    <div class="relative -mt-px border-t pb-6 pt-4 text-left md:pb-10 md:pt-8 border-transparent hover:border-slate-400" 
+    [ngClass]="{
+      'border-indigo-500': item === 3,
+      'border-transparent hover:border-slate-400': item !== 3
+    }">
+      <h3>
+        <!-- Boton3-->
+        <button class="whitespace-nowrap text-sm font-montserrat leading-7 sm:text-base [&amp;:not(:focus-visible)]:focus:outline-none text-slate-900" id="tab3" role="tab" type="button" aria-selected="false" tabindex="-1" data-headlessui-state="" aria-controls="headlessui-tabs-panel-18"  [ngClass]="{
+          'text-indigo-600': item === 3,
+          'text-slate-900': item !== 3
+        }" (click)="activateTab(3)">
+          <span class="absolute inset-0 -top-px"></span>Tajetas de crédito/débito</button></h3>
+          <p 
+          class="mt-2 hidden text-sm leading-6 text-slate-700 md:block">Realiza tu donación a través de una tarjeta de crédito/débito: Visa, Mastercard, American Express, etc.
+          </p>
+    </div>
   </div>
 </div>
 
-<div class="w-100">
-  <img class="w-auto h-auto" src="../assets/img/portada.jpg" />
-</div>
+<!--FIN TABS NAVEGACION-->
 
-<div class="w-full py-20">
-  <div class="w-full grid grid-cols-2 gap-4 px-60">
+<!--CONTENIDO-->
+  <!--BILLETERAS ELECTRÓNICAS-->
+<div class="w-full pb-28" *ngIf="item == 1">
+  <div class="w-full grid grid-cols-3 gap-4 px-20">
 
     <div class="flex items-center border-2 rounded-xl p-4">
       <div class="w-36 h-36">
@@ -45,15 +137,88 @@
         <h1 class="font-montserrat text-base">999999999</h1>
       </div>
     </div>
-
-    
   </div>
 </div>
-
+  <!--TRANSFERENCIAS BANCARIAS-->
+  <div class="w-full pb-20" *ngIf="item == 2">
+    <div class="w-full grid grid-cols-3 gap-4 px-20">
+  
+      <div class="flex items-center border-2 rounded-xl p-4">
+        <div class="w-36 h-36">
+          <img src="../assets/img/bcp.png" />
+        </div>
+        <div class="pl-8">
+          <h1 class="font-montserrat font-bold text-xl">Banco De Crédito Del Perú</h1>
+          <h1 class="font-montserrat text-base">00000000000000000000</h1>
+          <h1 class="font-montserrat text-base mt-1"><u>Código de Cuenta Interbancaria (CCI)</u></h1>
+          <h1 class="font-montserrat text-base">00000000000000000000</h1>
+        </div>
+      </div>
+  
+      <div class="flex items-center border-2 rounded-xl p-4">
+        <div class="w-36 h-36">
+          <img src="../assets/img/interbank.png" />
+        </div>
+        <div class="pl-8">
+          <h1 class="font-montserrat font-bold text-xl">Interbank</h1>
+          <h1 class="font-montserrat text-base mt-1"><u>Cuenta Corriente Soles</u></h1>
+          <h1 class="font-montserrat text-base">00110661010007193765</h1>
+          <h1 class="font-montserrat text-base mt-1"><u>Código de Cuenta Interbancaria (CCI)</u></h1>
+          <h1 class="font-montserrat text-base">01166100010007193765</h1>
+        </div>
+      </div>
+  
+      <div class="flex items-center border-2 rounded-xl p-4">
+        <div class="w-36 h-36">
+          <img src="../assets/img/scotia.png" />
+        </div>
+        <div class="pl-8">
+          <h1 class="font-montserrat font-bold text-xl">Scotiabank</h1>
+          <h1 class="font-montserrat text-base mt-1"><u>Cuenta Corriente Soles</u></h1>
+          <h1 class="font-montserrat text-base">0000379459</h1>
+          <h1 class="font-montserrat text-base mt-1"><u>Código de Cuenta Interbancaria (CCI)</u></h1>
+          <h1 class="font-montserrat text-base">00917000000037945921</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--TARJETAS DE CRÉDITO/DÉBITO-->
+  <div class="w-full pb-20" *ngIf="item == 3">
+    <div class="w-full grid grid-cols-3 gap-4 px-20">
+  
+      <div class="flex items-center border-2 rounded-xl p-4">
+        <div class="w-36 h-36">
+          <img src="../assets/img/visa.png" />
+        </div>
+        <div class="pl-8">
+          <h1 class="font-montserrat font-bold text-xl">Visa</h1>
+        </div>
+      </div>
+  
+      <div class="flex items-center border-2 rounded-xl p-4">
+        <div class="w-36 h-36">
+          <img src="../assets/img/mastercard.png" />
+        </div>
+        <div class="pl-8">
+          <h1 class="font-montserrat font-bold text-xl">Mastercard</h1>
+        </div>
+      </div>
+  
+      <div class="flex items-center border-2 rounded-xl p-4">
+        <div class="w-36 h-36">
+          <img src="../assets/img/amex.png" />
+        </div>
+        <div class="pl-8">
+          <h1 class="font-montserrat font-bold text-xl">American Express</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- FIN DE CONTENIDO-->
 <div class="w-full bg-indigo-900 py-20 text-white">
   <div class="grid grid-cols-3 px-60 gap-8">
     <div>
-      <h1 class="font-bold text-xl text-center">Nuesta ubicación</h1>
+      <h1 class="font-bold text-xl text-center">Nuestra ubicación</h1>
       <h1 class="text-base mt-4 text-center">Sociedad de Beneficencia de Lima Metropolitana - Jr. Carabaya 641 Lima - Perú</h1>
     </div>
 
