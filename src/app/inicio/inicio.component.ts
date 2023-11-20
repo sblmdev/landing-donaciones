@@ -45,6 +45,7 @@ export class InicioComponent {
     window.open('https://www.google.com', '_blank');
   }
   abrirPago(){
-    window.location.replace(this.direccion+'/pago');
+    //window.open(this.direccion+'/pago');
+    this.router.navigate(['/', 'pago']);
   }
 }
