@@ -2,19 +2,7 @@
 @tailwind base;
 @tailwind components;
 .element{
-  @apply w-full  rounded-t-3xl px-4 mx-auto  justify-center items-center;
-}
-.largeTextBox{
-  @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5
-}
-.textBox{
-  @apply  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  
-}
-.textBox:focus{
-  @apply ring-blue-500 border-blue-500 block w-full p-2.5 dark:bg-gray-700 
-}
-.textBox.dark{
-  @apply border-gray-600 placeholder-gray-400 text-white 
+  @apply w-full  rounded-t-3xl px-4 justify-center items-center;
 }
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');

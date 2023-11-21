@@ -1,6 +1,7 @@
 
 <!--FONDO Y TITULOS-->
-<div class="relative w-100 opacity-100 ">
+
+<div class="relative w-full opacity-100 ">
     <img class="w-full h-auto" src="../assets/img/Presentación1.png"/>
   
     <!-- bg-gray-500/50 se puede agregar -->
@@ -27,13 +28,16 @@
       </p>
       
     </div> -->
-    <button class="absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-8 py-3 rounded-3xl bg-indigo-900 hover:bg-indigo-700 transition-all duration-200 text-white font-bold font-monserrat xl:text-2xl lg:text-lg md:text-md sm:text-sm xs:text-xs text-center border border-blue-700 rounded" (click)="bajar()">
+    <button class="absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-8 py-3 
+    rounded-3xl bg-indigo-900 hover:bg-indigo-700 transition-all duration-200 text-white font-bold 
+    font-monserrat  text-xs sm:text-sm md:text-md lg:text-lg xl:text-2xl text-center border border-blue-700 rounded" (click)="bajar()">
       Dona a nombre de la S.B.L.M DONACIONES
     </button>
-    
   </div>
+
+  <div class="w-full px-4 md:px-20">
   <!--TABS DE NAVEGACION-->
-  <div class="mt-16 px-20 border-t flex sm:space-x-10 md:grid md:grid-cols-2 md:gap-x-8 md:space-x-0" role="tablist" aria-orientation="horizontal">
+  <div class="w-full mt-16 border-t flex  md:grid grid-cols-2 md:gap-x-8 " role="tablist" aria-orientation="horizontal">
     <!-- ELEMENTO1 
     <div class = "w-full  rounded-t-3xl px-4 mx-auto  justify-center items-center" 
       [ngClass]="{
@@ -63,8 +67,7 @@
       </div>
     </div> -->
     
-    <div class="w-10 min-w-[1rem] shrink sm:hidden" aria-hidden="true">
-    </div>
+  
   <!-- ELEMENTO2 -->
     <div class = "element" 
     [ngClass]="{
@@ -79,12 +82,12 @@
       }"> 
         <h3>
           <!-- Boton2-->
-          <button class="whitespace-nowrap font-bold text-sm font-montserrat leading-7 sm:text-base [&amp;:not(:focus-visible)]:focus:outline-none transition-all text-slate-900" id="tab2" role="tab" type="button" aria-selected="true" tabindex="-1" data-headlessui-state="" aria-controls="headlessui-tabs-panel-17"  
+          <button class=" font-bold  font-montserrat leading-7 text-xs sm:text-sm md:text-base [&amp;:not(:focus-visible)]:focus:outline-none transition-all text-slate-900" id="tab2" role="tab" type="button" aria-selected="true" tabindex="-1" data-headlessui-state="" aria-controls="headlessui-tabs-panel-17"  
           [ngClass]="{
             'text-white': item === 2,
             'text-slate-900': item !== 2
           }" (click)="activateTab(2)">
-            <span class="absolute inset-0 -top-px"></span>Transferencias Bancarias</button>
+            <span class="absolute inset-0 "></span>Transferencias Bancarias</button>
           </h3>
           <p
           class="mt-2 hidden text-sm leading-6 text-slate-700 md:block" [ngClass]="{
@@ -109,12 +112,12 @@
       }">
         <h3>
           <!-- Boton3-->
-          <button class="whitespace-nowrap font-bold text-sm font-montserrat leading-7 sm:text-base [&amp;:not(:focus-visible)]:focus:outline-none transition-all text-slate-900" id="tab3" role="tab" type="button" aria-selected="false" tabindex="-1" data-headlessui-state="" aria-controls="headlessui-tabs-panel-18" 
+          <button class="font-bold  font-montserrat leading-7 text-xs sm:text-sm md:text-base [&amp;:not(:focus-visible)]:focus:outline-none transition-all text-slate-900" id="tab3" role="tab" type="button" aria-selected="false" tabindex="-1" data-headlessui-state="" aria-controls="headlessui-tabs-panel-18" 
            [ngClass]="{
             'text-white': item === 3,
             'text-slate-900': item !== 3
           }" (click)="activateTab(3)">
-            <span class="absolute inset-0 -top-px" ></span>Tajetas de crédito/débito</button></h3>
+            <span class="absolute inset-0 " ></span>Tajetas de crédito/débito</button></h3>
             <p 
             class="mt-2 hidden text-sm leading-6 text-slate-700 md:block" [ngClass]="{
               'text-white': item === 3
@@ -129,9 +132,9 @@
   <!--CONTENIDO-->
     <!--BILLETERAS ELECTRÓNICAS-->
     
-  <div class="w-full px-20 pb-10 " *ngIf="item == 1">
-    <div class = "w-full bg-slate-50 rounded-r-3xl rounded-b-3xl mx-auto shadow-xl py-10 border-2 border-black justify-center items-center">
-      <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 px-20  ">
+  <div class="w-full  pb-10 " *ngIf="item == 1">
+    <div class = "w-full bg-slate-50 rounded-r-3xl rounded-b-3xl  shadow-xl py-10 border-2 border-black justify-center items-center">
+      <div class="w-full  grid grid-cols-1 md:grid-cols-3 gap-4 px-20  ">
         <!-- YAPE -->
         <div class="flex justify-center items-center border-2 rounded-xl p-4 shadow-xl">
           <div class="w-36 h-36">
@@ -159,25 +162,25 @@
     </div>
   </div>
     <!--TRANSFERENCIAS BANCARIAS-->
-    <div class=" min-w-sm xl:w-full px-20 pb-10" *ngIf="item == 2">
-      <div class = " min-w-sm w-full bg-slate-50 rounded-r-3xl rounded-b-3xl mx-auto shadow-xl py-10 border-2 border-black justify-center items-center">
-        <div class=" w-full grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-4 px-20">
+    
+
+        <div class=" w-full grid 2xl:grid-cols-3 mx-auto px-8 xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 gap-4 bg-slate-50 rounded-r-3xl rounded-b-3xl shadow-xl py-10 border-2 border-black justify-center items-center" *ngIf="item == 2">
       
           <div class="flex  items-center border-2 rounded-xl p-4 shadow-xl">
-            <div class=" w-36 h-36">
+            <div class="  w-full md:w-1/2 lg:w-1/4 xl:w-1/6">
               <img src="../assets/img/bcp.png" />
             </div>
             <div class="pl-8">
               <h1 class="font-montserrat font-bold xl:text-lg md:text-base sm:text-sm xs:text-sm">Banco De Crédito Del Perú</h1>
               <h1 class="font-montserrat md:text-base mt-1 xl:text-base md :text-sm sm:text-xs xs:text-xs"><u>Cuenta Corriente Soles</u></h1>
-              <h1 class="font-montserrat md:text-base xl:text-base md :text-sm sm:text-xs xs:text-xs">00000000000000000000</h1>
+              <h1 class="font-montserrat md:text-base mt-1 xl:text-base md :text-sm sm:text-xs xs:text-xs">000000000000000000</h1>
               <h1 class="font-montserrat md:text-base mt-1 xl:text-base md :text-sm sm:text-xs xs:text-xs"><u>Código de Cuenta Interbancaria (CCI)</u></h1>
-              <h1 class="font-montserrat md:text-base xl:text-base md :text-sm sm:text-xs xs:text-xs">00000000000000000000</h1>
+              <h1 class="font-montserrat md:text-base mt-1 xl:text-base md :text-sm sm:text-xs xs:text-xs">000000000000000000</h1>
             </div>
           </div>
       
           <div class="flex items-center border-2 rounded-xl p-4 shadow-xl">
-            <div class="w-36 h-36">
+            <div class=" w-full md:w-1/2 lg:w-1/4 xl:w-1/6">
               <img src="../assets/img/interbank.png" />
             </div>
             <div class="pl-8">
@@ -190,8 +193,8 @@
           </div>
       
           <div class="flex items-center border-2 rounded-xl p-4 shadow-xl">
-            <div class="w-36 h-36">
-              <img src="../assets/img/scotia.png" />
+            <div class=" w-full md:w-1/2 lg:w-1/4 xl:w-1/6">
+              <img class="rounded-3xl" src="../assets/img/scotia.png" />
             </div>
             <div class="pl-8">
               <h1 class="font-montserrat font-bold xl:text-lg md:text-base sm:text-sm xs:text-sm">Scotiabank</h1>
@@ -202,54 +205,55 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
+
     <!--TARJETAS DE CRÉDITO/DÉBITO-->
-    <div class="w-full px-20 pb-10" *ngIf="item == 3">
+    
   
-      <div class = "w-full bg-slate-50 rounded-l-3xl rounded-b-3xl mx-auto shadow-xl py-10 border-2 border-black justify-center items-center">   
-        <div class="w-full grid grid-cols-3 gap-4 px-20 ">
+      <div class = "w-full mx-auto px-8 bg-slate-50 rounded-l-3xl rounded-b-3xl shadow-xl py-10 border-2 border-black justify-center items-center" *ngIf="item == 3">   
+        <div class="w-full grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-4  ">
       
           <button class="flex items-center border-2 rounded-xl p-4 shadow-xl hover:shadow-none transition-all duration-200 " (click)="abrirPago()">
-            <div class="w-36  h-36 ">
+            <div class="w-36  h-36 w-full md:w-1/2 lg:w-1/4 xl:w-1/6">
               <img src="../assets/img/visa.png" />
             </div>
             <div class="pl-8">
-              <h1 class="font-montserrat font-bold text-xl ">Visa</h1>
+              <h1 class="font-montserrat font-bold xl:text-lg md:text-base sm:text-sm xs:text-sm ">Visa</h1>
             </div>
           </button>
       
           <div class="flex items-center border-2 rounded-xl p-4 shadow-xl hover:shadow-none transition-all duration-200" (click)="abrirPago()">
-            <div class="w-36  h-36 ">
+            <div class="w-36  h-36 w-full md:w-1/2 lg:w-1/4 xl:w-1/6">
               <img src="../assets/img/mastercard.png" />
             </div>
             <div class="pl-8 ">
-              <h1 class="font-montserrat font-bold text-xl ">Mastercard</h1>
+              <h1 class="font-montserrat font-bold xl:text-lg md:text-base sm:text-sm xs:text-sm ">Mastercard</h1>
             </div>
           </div>
       
           <div class="flex  items-center border-2 rounded-xl p-4 shadow-xl hover:shadow-none transition-all duration-200" (click)="abrirPago()">
-            <div class="w-36 h-36  ">
+            <div class="w-36 h-36  w-full md:w-1/2 lg:w-1/4 xl:w-1/6">
               <img src="../assets/img/amex.png" />
             </div>
             <div class="pl-8">
-              <h1 class="font-montserrat font-bold text-xl ">American Express</h1>
+              <h1 class="font-montserrat font-bold xl:text-lg md:text-base sm:text-sm xs:text-sm ">American Express</h1>
             </div>
           </div>
         </div>
       </div> 
-    </div>
+
   <!-- FIN DE CONTENIDO-->
-  <div class="w-full bg-indigo-900 py-11 md:px-20 text-white">
-    <div class="grid grid-cols-3 xl:px-60 md:px-20 gap-8">
+
+</div>
+  <div class="w-full bg-indigo-900 py-11 md:px-8 text-white">
+    <div class="grid grid-cols-1 md:grid-cols-3 md:px-18 gap-4 lg:gap-4">
       <div>
-        <h1 class="font-bold xl:text-xl md :text-lg sm:text-base xs:text-sm text-center">Nuestra ubicación</h1>
-        <h1 class="xl:text-lg md :text-md sm:text-sm xs:text-xs mt-4 text-center">Sociedad de Beneficencia de Lima Metropolitana - Jr. Carabaya 641 Lima - Perú</h1>
+        <h1 class="font-bold text-sm md:text-base lg:text-lg  text-center">Nuestra ubicación</h1>
+        <h1 class="text-sm md:text-base lg:text-lg  mt-2 md:mt-4 mx-12 md:mx-24  text-center">Sociedad de Beneficencia de Lima Metropolitana - Jr. Carabaya 641 Lima - Perú</h1>
       </div>
   
       <div>
-        <h1 class="font-bold xl:text-xl md :text-lg sm:text-base xs:text-sm text-center">Contáctanos</h1>
-        <h1 class="xl:text-lg md :text-md sm:text-sm xs:text-xs mt-4 text-center">(01) 427-6521 / (01) 427-6522
+        <h1 class="font-bold text-sm md:text-base lg:text-lg text-center">Contáctanos</h1>
+        <h1 class="text-sm md:text-base lg:text-lg md:mt-4 text-center">(01) 427-6521 / (01) 427-6522
         </h1>
       </div>
   
