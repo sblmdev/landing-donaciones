@@ -30,7 +30,7 @@
     </div> -->
     <button class="absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-8 py-3 
     rounded-3xl bg-indigo-900 hover:bg-indigo-700 transition-all duration-200 text-white font-bold 
-    font-monserrat  text-xs sm:text-sm md:text-md lg:text-lg xl:text-2xl text-center border border-blue-700 rounded" (click)="bajar()">
+    font-monserrat  text-xs sm:text-sm md:text-md lg:text-lg xl:text-2xl text-center border border-blue-700 rounded hidden lg:block" (click)="bajar()">
       Dona a nombre de la S.B.L.M DONACIONES
     </button>
   </div>
@@ -164,44 +164,44 @@
     <!--TRANSFERENCIAS BANCARIAS-->
     
 
-        <div class=" w-full grid 2xl:grid-cols-3 mx-auto px-8 xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 gap-4 bg-slate-50 rounded-r-3xl rounded-b-3xl shadow-xl py-10 border-2 border-black justify-center items-center" *ngIf="item == 2">
-      
-          <div class="flex  items-center border-2 rounded-xl p-4 shadow-xl">
-            <div class="  w-full md:w-1/2 lg:w-1/4 xl:w-1/6">
-              <img src="../assets/img/bcp.png" />
+        <div class=" w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 mx-auto px-4 md:px-8
+        gap-4 bg-slate-50 rounded-r-3xl rounded-b-3xl shadow-xl py-10 border-2 border-black justify-center items-center" *ngIf="item == 2">
+          <div class=" flex items-center border-2 rounded-xl p-4 shadow-xl">
+            <div class="w-1/4 md:w-1/6 lg:w-1/4 ">
+              <img class="rounded-2xl"src="../assets/img/bcp.png" />
             </div>
             <div class="pl-8">
-              <h1 class="font-montserrat font-bold xl:text-lg md:text-base sm:text-sm xs:text-sm">Banco De Crédito Del Perú</h1>
-              <h1 class="font-montserrat md:text-base mt-1 xl:text-base md :text-sm sm:text-xs xs:text-xs"><u>Cuenta Corriente Soles</u></h1>
-              <h1 class="font-montserrat md:text-base mt-1 xl:text-base md :text-sm sm:text-xs xs:text-xs">000000000000000000</h1>
-              <h1 class="font-montserrat md:text-base mt-1 xl:text-base md :text-sm sm:text-xs xs:text-xs"><u>Código de Cuenta Interbancaria (CCI)</u></h1>
-              <h1 class="font-montserrat md:text-base mt-1 xl:text-base md :text-sm sm:text-xs xs:text-xs">000000000000000000</h1>
+              <h1 class="font-montserrat font-bold text-sm md:text-base xl:text-lg">Banco De Crédito Del Perú</h1>
+              <h1 class="font-montserrat mt-1 text-xs md:text-sm xl:text-base "><u>Cuenta Corriente Soles</u></h1>
+              <h1 class="font-montserrat mt-1 text-xs md:text-sm xl:text-base">000000000000000000</h1>
+              <h1 class="font-montserrat mt-1 text-xs md:text-sm xl:text-base"><u>Código de Cuenta Interbancaria (CCI)</u></h1>
+              <h1 class="font-montserrat mt-1 text-xs md:text-sm xl:text-base">000000000000000000</h1>
             </div>
           </div>
       
           <div class="flex items-center border-2 rounded-xl p-4 shadow-xl">
-            <div class=" w-full md:w-1/2 lg:w-1/4 xl:w-1/6">
+            <div class=" w-1/4 md:w-1/6 lg:w-1/4 ">
               <img src="../assets/img/interbank.png" />
             </div>
             <div class="pl-8">
-              <h1 class="font-montserrat font-bold xl:text-lg md:text-base sm:text-sm xs:text-sm">Interbank</h1>
-              <h1 class="font-montserrat md:text-base mt-1 xl:text-base md :text-sm sm:text-xs xs:text-xs"><u>Cuenta Corriente Soles</u></h1>
-              <h1 class="font-montserrat md:text-base xl:text-base md :text-sm sm:text-xs xs:text-xs">00110661010007193765</h1>
-              <h1 class="font-montserrat md:text-base mt-1 xl:text-base md :text-sm sm:text-xs xs:text-xs"><u>Código de Cuenta Interbancaria (CCI)</u></h1>
-              <h1 class="font-montserrat md:text-base xl:text-base md :text-sm sm:text-xs xs:text-xs">01166100010007193765</h1>
+              <h1 class="font-montserrat font-bold text-sm md:text-base xl:text-lg">Interbank</h1>
+              <h1 class="font-montserrat mt-1 text-xs md:text-sm xl:text-base"><u>Cuenta Corriente Soles</u></h1>
+              <h1 class="font-montserrat text-xs md:text-sm xl:text-base">00110661010007193765</h1>
+              <h1 class="font-montserrat mt-1 text-xs md:text-sm xl:text-base"><u>Código de Cuenta Interbancaria (CCI)</u></h1>
+              <h1 class="font-montserrat text-xs md:text-sm xl:text-base">01166100010007193765</h1>
             </div>
           </div>
       
           <div class="flex items-center border-2 rounded-xl p-4 shadow-xl">
-            <div class=" w-full md:w-1/2 lg:w-1/4 xl:w-1/6">
+            <div class=" w-1/4 md:w-1/6 lg:w-1/4 ">
               <img class="rounded-3xl" src="../assets/img/scotia.png" />
             </div>
             <div class="pl-8">
-              <h1 class="font-montserrat font-bold xl:text-lg md:text-base sm:text-sm xs:text-sm">Scotiabank</h1>
-              <h1 class="font-montserrat md:text-base mt-1 xl:text-base md :text-sm sm:text-xs xs:text-xs"><u>Cuenta Corriente Soles</u></h1>
-              <h1 class="font-montserrat md:text-base xl:text-base md :text-sm sm:text-xs xs:text-xs">0000379459</h1>
-              <h1 class="font-montserrat md:text-base mt-1 xl:text-base md :text-sm sm:text-xs xs:text-xs"><u>Código de Cuenta Interbancaria (CCI)</u></h1>
-              <h1 class="font-montserrat md:text-base xl:text-base md :text-sm sm:text-xs xs:text-xs">00917000000037945921</h1>
+              <h1 class="font-montserrat font-bold text-sm md:text-base xl:text-lg">Scotiabank</h1>
+              <h1 class="font-montserrat mt-1 text-xs md:text-sm xl:text-base"><u>Cuenta Corriente Soles</u></h1>
+              <h1 class="font-montserrat text-xs md:text-sm xl:text-base">0000379459</h1>
+              <h1 class="font-montserrat mt-1 text-xs md:text-sm xl:text-base"><u>Código de Cuenta Interbancaria (CCI)</u></h1>
+              <h1 class="font-montserrat text-xs md:text-sm xl:text-base">00917000000037945921</h1>
             </div>
           </div>
         </div>
@@ -209,11 +209,11 @@
     <!--TARJETAS DE CRÉDITO/DÉBITO-->
     
   
-      <div class = "w-full mx-auto px-8 bg-slate-50 rounded-l-3xl rounded-b-3xl shadow-xl py-10 border-2 border-black justify-center items-center" *ngIf="item == 3">   
-        <div class="w-full grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-4  ">
+      <div class = " w-full grid 2xl:grid-cols-3 mx-auto px-4 xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 gap-4 bg-slate-50 rounded-r-3xl rounded-b-3xl shadow-xl py-10 border-2 border-black justify-center items-center" *ngIf="item == 3">   
+       
       
           <button class="flex items-center border-2 rounded-xl p-4 shadow-xl hover:shadow-none transition-all duration-200 " (click)="abrirPago()">
-            <div class="w-36  h-36 w-full md:w-1/2 lg:w-1/4 xl:w-1/6">
+            <div class="w-1/4 md:w-1/6 lg:w-1/4">
               <img src="../assets/img/visa.png" />
             </div>
             <div class="pl-8">
@@ -222,7 +222,7 @@
           </button>
       
           <div class="flex items-center border-2 rounded-xl p-4 shadow-xl hover:shadow-none transition-all duration-200" (click)="abrirPago()">
-            <div class="w-36  h-36 w-full md:w-1/2 lg:w-1/4 xl:w-1/6">
+            <div class="w-1/4 md:w-1/6 lg:w-1/4">
               <img src="../assets/img/mastercard.png" />
             </div>
             <div class="pl-8 ">
@@ -231,24 +231,23 @@
           </div>
       
           <div class="flex  items-center border-2 rounded-xl p-4 shadow-xl hover:shadow-none transition-all duration-200" (click)="abrirPago()">
-            <div class="w-36 h-36  w-full md:w-1/2 lg:w-1/4 xl:w-1/6">
+            <div class="w-1/4 md:w-1/6 lg:w-1/4">
               <img src="../assets/img/amex.png" />
             </div>
             <div class="pl-8">
               <h1 class="font-montserrat font-bold xl:text-lg md:text-base sm:text-sm xs:text-sm ">American Express</h1>
             </div>
           </div>
-        </div>
       </div> 
 
   <!-- FIN DE CONTENIDO-->
 
 </div>
-  <div class="w-full bg-indigo-900 py-11 md:px-8 text-white">
+  <div class="w-full mt-8 bg-indigo-900 py-11 md:px-8 text-white">
     <div class="grid grid-cols-1 md:grid-cols-3 md:px-18 gap-4 lg:gap-4">
       <div>
         <h1 class="font-bold text-sm md:text-base lg:text-lg  text-center">Nuestra ubicación</h1>
-        <h1 class="text-sm md:text-base lg:text-lg  mt-2 md:mt-4 mx-12 md:mx-24  text-center">Sociedad de Beneficencia de Lima Metropolitana - Jr. Carabaya 641 Lima - Perú</h1>
+        <h1 class="text-sm md:text-base lg:text-lg  mt-2 md:mt-4 mx-12 md:mx-8 lg:mx-16 text-center">Sociedad de Beneficencia de Lima Metropolitana - Jr. Carabaya 641 Lima - Perú</h1>
       </div>
   
       <div>
